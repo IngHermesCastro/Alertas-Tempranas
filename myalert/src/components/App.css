@@ -1,0 +1,260 @@
+/* Estilos generales */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+}
+
+/* Estilos específicos de la página de inicio de sesión */
+/* 
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin-top: 20px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  text-align: left;
+  width: 100%;
+}
+
+input[type="email"],
+input[type="password"] {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+button {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #3e8e41;
+}
+
+p {
+  text-align: center;
+  margin-top: 10px;
+}
+*/
+/* Mis estilos*/
+body{
+  display:flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background: linear-gradient(135deg, #3e8e41, #39b0d8) ;
+}
+.container{
+  max-width: 700px;
+  width: 100%;
+  background: #ffffff;
+  padding: 25px 30px;
+  border-radius: 5px;
+}
+.container .title{
+  font-size: 25px;  
+  font-weight: 500;
+  position: relative;
+
+}
+.container .title::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 30px;
+  background: linear-gradient(135deg, #3e8e41, #39b0d8) ;
+}
+.container form .user-details{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 15px 0;
+
+}
+form .user-details .input-box{
+  margin-bottom:  15px;
+  width: calc(100% / 2 - 20px); /*Separacion de alto entre cada cuadro*/
+}
+.user-details .input-box .details{
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.user-details .input-box input{
+  height: 45px;
+  width: 90%; /*Largo cuadros*/
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid #1ba1c9; /*Borde de cuadros*/
+  padding-left: 15px;
+  font-size: 16px; /*tamaño texto dentro de cuadro*/ 
+  border-bottom-width: 3px; /*Sombreado de cuadros */
+  transition: all 0.5s ease; /*Tiempo transcicion*/
+}
+.user-details .input-box input:focus,
+.user-details .input-box input:valid{
+  border-color: rgb(71, 228, 76); /*Color Cuando este dentro de casilla*/
+
+}
+form .button{
+  height: 45px;
+  margin: 45px 0;
+
+}
+form .button input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  color: #ffffff;
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  background: linear-gradient(135deg, #3e8e41, #39b0d8);
+}
+form .button input:hover{
+  background: linear-gradient(-135deg, #3e8e41, #39b0d8);/*Cambio de color, registrar*/
+  
+}
+ @media (max-width: 584px){
+  .container{
+    max-width: 100%;
+  }
+  form .user-details .input-box{
+    margin-bottom:  15px;
+    width: 100%; 
+  }
+  .container form .user-details{
+    max-height: 300px;
+    overflow-y: scroll;
+
+  }
+  .user-details::-webkit-scrollbar{
+    width: 0;
+  }
+}
+
+/*PARA EL LOGIN*/
+.containerLogin{
+  display: grid;
+  height: 100%;
+  place-items: center;
+  background: #ffffff; /*Cambiar a,  MISMO COLOR DEL FONDO.. Color azul*/
+}
+.wrapper{
+  width: 380px;
+  background: #ffffff; /*Cambiar a blanco,*/
+  border-radius: 5px;
+}
+.wrapper .titleLogin{
+  line-height: 90px;
+  background: #16a085;/*Encabezado LOGIN FORM*/
+  text-align: center;
+  border-radius: 5px 5px 0 0;
+  color: #fff;
+  font-size: 25px;
+  font-weight: 600;
+}
+.wrapper form{
+  padding: 30px 25px 25px 25px;
+}
+.wrapper form .row{
+  height: 45px;
+  background: #ffffff;
+  margin-bottom: 15px;
+  position: relative;
+}
+.wrapper form .row input{
+  height: 100%;
+  width: 83%;
+  outline: none;
+  padding-left: 60px;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  transition: all 0.5s ease;
+}
+form .row input:focus{
+  border-color: #16a085;
+  box-shadow: inset 0px 0px 2px 2px rgba(26,188,156,0.25);
+}
+.wrapper form .row i{
+  position: absolute;
+  width: 47px;
+  height: 109%; /*Tamaño de alto cuadro del icono*/
+  color: #fff;
+  font-size: 18px;
+  background: #16a085;
+  border: 1px solid #16a085;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper form .pass{
+  margin: 2px 0 20px 0; /*Automatica opcion 2*/
+}
+.wrapper form .pass a{
+  color: #16a085;
+  font-size: 17px;
+  text-decoration: none;
+}
+.wrapper form .pass a:hover{
+  text-decoration: underline;
+}
+.wrapper form .button input{
+  color:#fff;
+  font-size: 20px;
+  font-weight: 500;
+  padding-left: 0px;
+  background: #16a085;/*Color para el boton, borde*/
+  border: 1px solid #16a085;
+  cursor: pointer;
+}
+form .button input:hover{
+  background: #12876f;/*ANIMACION PARA EL BOTON*/
+}
+.wrapper form .signip-link{
+  text-align: center;
+  margin-top: 20px;
+  font-size: 17px;
+}
+.wrapper form .signip-link a{
+  color: #16a085;
+  text-decoration: none;
+}
+form .signip-link a:hover{
+  text-decoration: underline;
+}
